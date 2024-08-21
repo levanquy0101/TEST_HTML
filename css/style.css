@@ -17,6 +17,10 @@
   --padding-app: 2rem 8rem;
 }
 
+a {
+  color: black;
+}
+
 /* -----------------------------CSS cho phần Header (phần đầu trang web) -----------------------------------*/
 #header {
   background-color: var(--color-gray);
@@ -309,6 +313,11 @@
   align-items: center;
   border: 1px solid #dcdcdc;
   padding: 8px;
+  box-shadow: inset 1px 1px 6px #dcdcdc, inset -1px -1px 6px #dcdcdc;
+}
+#main .section-four .item-2 .body .img-item img {
+  position: relative;
+  z-index: -1;
 }
 #main .section-five {
   padding: var(--padding-app);
@@ -405,7 +414,8 @@
     gap: 0.5rem;
     --columns: 2;
   }
-  #main .section-three .img-list {
+  #main .section-three {
+    --space: 2rem;
     --columns: 2;
   }
   #main .section-four {
