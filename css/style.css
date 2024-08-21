@@ -408,9 +408,6 @@
   #main .section-three .img-list {
     --columns: 2;
   }
-  #main .section-three .img-list img {
-    --space: 2rem;
-  }
   #main .section-four {
     flex-direction: column;
     gap: 1rem;
