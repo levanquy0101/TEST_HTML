@@ -436,6 +436,10 @@
   #main .section-one {
     height: 320px;
   }
+  #main .section-two {
+    gap: 0.5rem;
+    --columns: 1;
+  }
   #main .section-four .item-2 .body {
     grid-template-columns: repeat(2, minmax(150px, 1fr));
     grid-template-rows: repeat(3, 1fr);
