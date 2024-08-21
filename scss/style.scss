@@ -169,6 +169,12 @@
             .slider{
                 height: 400px;
             }
+
+        }
+        @media screen and (max-width: 534px){
+            .slider{
+                height: 320px;
+            }
         }
     }
     .section-two{
@@ -307,14 +313,14 @@
             }
             .body{
                 display: grid;
-                grid-template-columns: repeat(3, 1fr);
+                grid-template-columns: repeat(3, minmax(150px, 1fr));
                 grid-template-rows: repeat(2, 1fr);
                 .img-item{
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     border: 1px solid #dcdcdc;
-                    padding: 6px;
+                    padding: 8px;
                 }
             }
         }
@@ -357,6 +363,9 @@
         li{
             text-transform: uppercase;
             font-weight: bold;
+            ul{
+                margin-top: 0.5rem;
+            }
             ul li{
                 text-transform: capitalize;
                 font-weight: initial;
@@ -364,6 +373,31 @@
             }
             ul:nth-child(1){
                 max-width: 300px;
+            }
+        }
+        .with-us{
+            display: grid;
+            gap: 8px;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+    .footer-bottom{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .logo{
+            font-size: 2rem;
+            display: flex;
+            .bold {
+                font-weight: bold;
+                color: black;
+                }
+                
+            .regular {
+            font-weight: normal;
+            color: var(--color-secondary);
             }
         }
     }
@@ -413,11 +447,17 @@
         flex-direction: column;
         gap: 1rem;
     }
+    #main .section-five .item{
+        flex-direction: column;
+    }
 }
 /* Màn hình Tablet */
 @media screen and (max-width: 768px) {
     :root{
         --padding-app: 1.2rem 4rem;
+    }
+    #main .section-one{
+        height: 400px;
     }
 
 }
@@ -426,6 +466,13 @@
     :root{
         --padding-app: 0.8rem 1.6rem;
     }
+    #main .section-one{
+        height: 320px;
+    }
+    #main .section-four .item-2 .body {
+        grid-template-columns: repeat(2, minmax(150px, 1fr));
+        grid-template-rows: repeat(3, 1fr);
+      }
 
 }
 /* Màn hình Mobile cực nhỏ */

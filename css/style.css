@@ -170,6 +170,11 @@
     height: 400px;
   }
 }
+@media screen and (max-width: 534px) {
+  #main .section-one .slider {
+    height: 320px;
+  }
+}
 #main .section-two {
   width: 100%;
   background-color: var(--color-gray);
@@ -295,7 +300,7 @@
 }
 #main .section-four .item-2 .body {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
   grid-template-rows: repeat(2, 1fr);
 }
 #main .section-four .item-2 .body .img-item {
@@ -303,7 +308,7 @@
   justify-content: center;
   align-items: center;
   border: 1px solid #dcdcdc;
-  padding: 6px;
+  padding: 8px;
 }
 #main .section-five {
   padding: var(--padding-app);
@@ -345,6 +350,9 @@
   text-transform: uppercase;
   font-weight: bold;
 }
+#footer ul.infor li ul {
+  margin-top: 0.5rem;
+}
 #footer ul.infor li ul li {
   text-transform: capitalize;
   font-weight: initial;
@@ -352,6 +360,30 @@
 }
 #footer ul.infor li ul:nth-child(1) {
   max-width: 300px;
+}
+#footer ul.infor .with-us {
+  display: grid;
+  gap: 8px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+#footer .footer-bottom {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#footer .footer-bottom .logo {
+  font-size: 2rem;
+  display: flex;
+}
+#footer .footer-bottom .logo .bold {
+  font-weight: bold;
+  color: black;
+}
+#footer .footer-bottom .logo .regular {
+  font-weight: normal;
+  color: var(--color-secondary);
 }
 
 /* ------------------------------------------Responsive -------------------------------------------*/
@@ -383,17 +415,30 @@
     flex-direction: column;
     gap: 1rem;
   }
+  #main .section-five .item {
+    flex-direction: column;
+  }
 }
 /* Màn hình Tablet */
 @media screen and (max-width: 768px) {
   :root {
     --padding-app: 1.2rem 4rem;
   }
+  #main .section-one {
+    height: 400px;
+  }
 }
 /* Màn hình Mobile */
 @media screen and (max-width: 534px) {
   :root {
     --padding-app: 0.8rem 1.6rem;
+  }
+  #main .section-one {
+    height: 320px;
+  }
+  #main .section-four .item-2 .body {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-rows: repeat(3, 1fr);
   }
 }
 /* Màn hình Mobile cực nhỏ */
